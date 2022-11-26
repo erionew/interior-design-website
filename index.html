@@ -12,24 +12,21 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <div class="header__container flex">
-            <div class="container--navbar flex">
-                    <h1 class="header__siteHeading">Interior Design</h1>
-                    <nav>
-                        <ul class="navbar flex">
-                            <li class="navbar__listItem"><a class="header__link" href="#">About</a></li>
-                            <li class="navbar__listItem"><a class="header__link" href="#">Portfolio</a></li>
-                            <li class="navbar__listItem"><a class="header__link" href="#">Testimonials</a></li>
-                            <li class="navbar__listItem"><a class="header__link" href="#">Blog</a></li>
-                        </ul>
-                    </nav>
+    <header class="flex">
+        <nav class="flex"> 
+            <div class="container--nav flex">
+                <h1 class="header__siteHeading">Interior Design</h1>
+                <ul class="navList flex">
+                    <li class="nav__listItem"><a class="header__link" href="#">About</a></li>
+                    <li class="navList__listItem"><a class="header__link" href="#">Portfolio</a></li>
+                    <li class="navList__listItem"><a class="header__link" href="#">Testimonials</a></li>
+                    <li class="navList__listItem"><a class="header__link" href="#">Blog</a></li>
+                </ul>
             </div>
             <div class="container--contact">
                 <p><a class="header__link" href="#">Contact</a></p>
             </div>
-        </div>
-        <img id="main__img" src="./resources/livingroom.jpg" alt="modern living room">
+        </nav>
     </header>
     <main>
         
@@ -56,20 +53,34 @@
                 <button class="card__btn">More Info</button>
             </div>
         </section>
-        <section class="section--gallery grid">
-            <img src="./resources/diningroom.jpg" alt="modern dining room">
-            <img src="./resources/office.jpg" alt="office with 2 leather chairs">
-            <img src="./resources/kitchen.jpg" alt="white kitchen with gold hardware">
-            <img src="./resources/bathroom.jpg" alt="modern bathroom with black and white cabinets">
-            <img src="./resources/open-diningroom.jpg" alt="open concept dining room next to kitchen">
+        <section class="section--gallery">
+            <h3>Instagram</h3>
+            <div class="gallery flex">
+                <div class="gallery--featured">
+                    <img src="./resources/diningroom.jpg" alt="modern dining room">
+                </div>
+                <div class="gallery--container flex">
+                    <img src="./resources/office.jpg" alt="office with 2 leather chairs">
+                    <img src="./resources/kitchen.jpg" alt="white kitchen with gold hardware">
+                    <img src="./resources/bathroom.jpg" alt="modern bathroom with black and white cabinets">
+                    <img src="./resources/open-diningroom.jpg" alt="open concept dining room next to kitchen">
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <ul class="container__socialMedia">
-            <li><a href="" class="container__link"><i class="fa-brands fa-facebook-f"></i></li>
-            <li><a href="" class="container__link"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="" class="container__link"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="" class="container__link"><i class="fa-brands fa-pinterest"></i></a></li>
+        <ul class="list--socialMedia flex">
+            <li><a href=""><i class="fa-brands fa-facebook-f"></a></i>
+            </li>
+
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+
+            <li><a href=""><i class="fa-brands fa-pinterest"></i></a>
+            </li>
         </ul>
     </footer>
 </body>
