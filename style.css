@@ -15,6 +15,16 @@ body{
 a{
     text-decoration: none;
     color: rgb(124, 124, 124);
+    transition: all 300ms;
+}
+
+a:hover{
+    text-shadow: 1px 3px rgb(197, 197, 197);
+}
+
+button:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 a:visited{
