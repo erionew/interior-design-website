@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%
 }
 
 body{
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     color: rgb(49, 49, 49);
+    width: 100%;
 }
 
 a{
@@ -28,11 +30,11 @@ a:visited{
 }
 
 header{
+    width: 100%;
     height: 100vh;
     text-transform: uppercase;
     justify-content: space-between;
     align-items: flex-start;
-
     background-image: url(./resources/livingroom.jpg);
     background-size: cover;
     background-position-y: -200px ;
@@ -43,7 +45,8 @@ nav{
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(255, 255, 255);  
+    background-color: rgb(255, 255, 255); 
+    font-size: 1rem; 
 }
 
 .container--nav{
@@ -61,13 +64,13 @@ nav{
 
 main{
     margin: auto;
-    width: 75%;
+    width: 80%;
 }
 
 
 h2 {
     margin: 10rem 0;
-    font-size: 36px;
+    font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
 }
@@ -81,6 +84,7 @@ h2 {
 }
 
 .card{
+    margin: 0 1rem;
     height: 600px;
     width: 450px;
     line-height: 1.5;
@@ -109,7 +113,7 @@ h2 {
 }
 
 h3{
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 6rem;
@@ -125,27 +129,29 @@ h3{
 
 .gallery--featured{
     width: 50%;
-    height: 650px;
+    height: 600px;
 }
 
 .gallery--featured img{
-    width: 650px;
-    height: 650px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .gallery--container img{
     object-fit: cover;
-    width: 300px;
-    height: 300px;
+    width: 45%;
+    height: 280px;
 }
 
 .gallery--container{
+    margin: 0 2rem;
     width: 50%;
-    height: 650px;
+    height: 600px;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-content: space-between;
 }
 
 footer{
@@ -166,5 +172,145 @@ footer{
     cursor: pointer;
 }
 
+@media screen and (min-width:768px) and (max-width:1023px) {
+    body{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    header{
+        width: 100%;
+        height: 500px;
+        background-repeat: no-repeat;
+    }
+    nav{
+        padding: 1rem;
+    }
+    .navList__listItem{
+        margin: 0 0.5rem;
+    }
+
+    h2{
+        margin: 4rem 0;
+        font-size: 2rem;
+    }
+
+    .section--articles{
+        flex-wrap: wrap;
+    }
+
+    .card{
+        margin: 2rem 1rem;
+        width: 275px;
+    }
+
+    .gallery--featured img{
+        height: 400px;
+    }
+
+    .gallery--container{
+        height: 400px;
+    }
+
+    .gallery--container img {
+        height: 190px;
+        width: 130px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    
+    body{
+        font-size: 12px;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    header{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 300px;
+        background-position: center;
+    }
+
+    nav{
+        padding: 10px;
+        margin: 0;
+        font-size: 0.45rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__siteHeading{
+        font-size: 0.60rem;
+    }
+
+    .navList__listItem{
+        margin: 5px;
+    }
+
+    h2{
+        margin: 4rem 0;
+        font-size: 1.5rem;
+    }
+
+    h3{
+        margin: 3rem 0;
+        font-size: 1rem;
+    }
+
+    main{
+        margin:0;
+        width: 100%;
+    }
+
+    .section--articles{
+        margin: 0 1rem;
+        padding: 3rem 1rem;
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100%;
+        margin: 2.5rem 0;
+    }
+
+    .card__btn{
+        padding: 0.5rem 1rem;
+        font-size: 0.70rem;
+    }
+
+    .gallery{
+        flex-direction: column;
+    }
 
 
+    .gallery--featured{
+        margin: auto;
+        height: fit-content;
+        width: auto;
+    }
+
+    .gallery--featured img{
+        margin: 1rem 0;
+        width: 350px;
+        height: 350px;
+    }
+
+    .gallery--container{
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 350px;
+        height: 350px;
+    }
+
+    .gallery--container img{
+        margin: 10px;
+        width: 155px;
+        height: 155px;
+    }
+  }
